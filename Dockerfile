@@ -17,7 +17,7 @@ RUN chown root.root /usr/local/bin/set_root_password.sh \
     && chmod 755 /usr/local/bin/set_root_password.sh
 
 RUN apt update \
-    && apt install --no-install-recommends -y corosync-qnetd \
+    && apt install --no-install-recommends -y corosync-qnetd corosync-qdevice \
     && apt -y autoremove \
     && apt clean all
 
